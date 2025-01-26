@@ -50,7 +50,7 @@ const WorkflowCard = ({ workflow }: { workflow: Workflow }) => {
           <div>
             <h3 className="text-base font-bold text-muted-foreground flex items-center">
               <Link
-                href={`/workflows/editor/${workflow.id}`}
+                href={`/workflow/editor/${workflow.id}`}
                 className="flex items-center hover:underline"
               >
                 {workflow.name}
@@ -65,7 +65,7 @@ const WorkflowCard = ({ workflow }: { workflow: Workflow }) => {
         </div>
         <div className="flex items-center space-x-2">
           <Link
-            href={`/workflows/editor/${workflow.id}`}
+            href={`/workflow/editor/${workflow.id}`}
             className={cn(
               buttonVariants({ variant: "outline", size: "sm" }),
               "flex items-center gap-2"
