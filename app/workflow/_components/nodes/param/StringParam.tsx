@@ -3,13 +3,9 @@
 import React, { useId, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { StringParamProps } from "@/types/appNode";
+import { ParamProps } from "@/types/appNode";
 
-const StringParam = ({
-  param,
-  value,
-  updateNodeParamValue,
-}: StringParamProps) => {
+const StringParam = ({ param, value, updateNodeParamValue }: ParamProps) => {
   const [internalValue, setInternalValue] = useState(value);
   const id = useId();
   return (
