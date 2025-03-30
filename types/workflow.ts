@@ -1,3 +1,4 @@
+import {Workflow} from "@prisma/client";
 import {LucideProps} from "lucide-react";
 import {TaskParam, TaskType} from "./task";
 import {AppNode} from "./appNode";
@@ -23,3 +24,22 @@ export type WorkflowExecutionPlanPhase = {
 };
 
 export type WorkflowExecutionPlan = WorkflowExecutionPlanPhase[];
+
+export enum WorkflowExecutionStatus {
+    PENDING = "PENDING",
+    RUNNING = "RUNNING",
+    COMPLETED = "COMPLETED",
+    FAILED = "FAILED",
+}
+
+export enum WorkflowExecutionTrigger {
+    MANUAL = "MANUAL",
+}
+
+export enum ExecutionPhaseStatus {
+    CREATED = "CREATED",
+    PENDING = "PENDING",
+    RUNNING = "RUNNING",
+    COMPLETED = "COMPLETED",
+    FAILED = "FAILED",
+}
